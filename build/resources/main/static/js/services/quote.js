@@ -7,6 +7,10 @@ angular.module('app.services', ['ngResource'])
 		random: {
 			method: 'GET',
 			url: '/api/quote/random'
+		},
+		quoteList:{
+			method:'GET',
+			url:'/api/quote/viewlist'
 		}
 	});
-});
+})

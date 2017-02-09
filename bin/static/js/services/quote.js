@@ -10,8 +10,7 @@ angular.module('app.services', ['ngResource'])
 		},
 		quoteList:{
 			method:'GET',
-			url:'/api/quote/author/{authorId}'
+			url:'/api/quote/viewlist'
 		}
-		
 	});
 })

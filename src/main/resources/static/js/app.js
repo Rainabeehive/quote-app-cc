@@ -25,7 +25,7 @@ app.config(function($urlRouterProvider, $stateProvider) {
         })
     
         .state("qlist",{
-        	url:"/quoteList",
+        	url:"/quoteList/:authorId",
         	templateUrl:"templates/quoteList.html",
         	controller:"QuoteListCtrl"
         });

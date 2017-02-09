@@ -8,6 +8,14 @@ angular.module('app.controllers', [])
 			$scope.quote = quote;
 		});
 })
+
+.controller('QuoteListCtrl',function($scope, $stateParams, QuoteService){
+	QuoteService.quoteList($stateParams.authorId)
+	.$promise.then(function(quote)  {
+		$scope.quotes = quote;
+	});
+})
+
 .controller('SaveQuoteCtrl', function($scope, $state, QuoteService) {
     
     $scope.saveQuote = function() {

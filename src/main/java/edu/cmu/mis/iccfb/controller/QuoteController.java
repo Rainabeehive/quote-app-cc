@@ -30,8 +30,16 @@ public class QuoteController {
         return quoteService.randomQuote();
     }
    
-    @RequestMapping(value ="/api/quote/author/{authorId}", method = RequestMethod.GET)
+//    @RequestMapping(value ="/api/quote/viewlist", method = RequestMethod.GET)
+//    public List<Quote> findByAuthorName(String name) {
+//        return quoteService.findByName(name);
+//    }
+    
+    
+    @RequestMapping(value ="/api/quote/viewlist", method = RequestMethod.GET)
     public List<Quote> quoteList(@PathVariable Long authorId){
+        System.out.println(authorId);
+        System.out.println(authorId.toString());
         Author a = authorService.findOne(authorId);
         Iterable<Quote> quotes = quoteService.findAll();
         List<Quote> list = new ArrayList<Quote>();

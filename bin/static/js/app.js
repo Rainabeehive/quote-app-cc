@@ -22,5 +22,13 @@ app.config(function($urlRouterProvider, $stateProvider) {
             url: "/add",
             templateUrl : "templates/add.html",
             controller: "SaveQuoteCtrl"
+        })
+    
+        .state("qlist",{
+        	url:"/quoteList",
+        	templateUrl:"templates/quoteList.html",
+        	controller:"QuoteListCtrl"
         });
+    
+    
 });

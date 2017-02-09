@@ -10,7 +10,7 @@ angular.module('app.controllers', [])
 })
 
 .controller('QuoteListCtrl',function($scope, $stateParams, QuoteService){
-	QuoteService.quoteList($stateParams.authorId)
+	QuoteService.quoteList({authorId:$stateParams.authorId})
 	.$promise.then(function(quote)  {
 		$scope.quotes = quote;
 	});

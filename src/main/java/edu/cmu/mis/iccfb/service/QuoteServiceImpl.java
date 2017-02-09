@@ -25,5 +25,7 @@ public class QuoteServiceImpl implements QuoteServiceCustom {
         Quote q = quotes.get(random.nextInt(quotes.size()));
         return q;
     }
+    
+    
 
 }

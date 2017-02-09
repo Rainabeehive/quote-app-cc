@@ -37,12 +37,12 @@ public class QuoteController {
     
     
     @RequestMapping(value ="/api/quote/viewlist", method = RequestMethod.GET)
-    public List<Quote> quoteList(@PathVariable Long authorId){
-        System.out.println(authorId);
-        System.out.println(authorId.toString());
+    public ArrayList<Quote> quoteList(Long authorId){
+       /* System.out.println(authorId);
+        System.out.println(authorId.toString());*/
         Author a = authorService.findOne(authorId);
         Iterable<Quote> quotes = quoteService.findAll();
-        List<Quote> list = new ArrayList<Quote>();
+        ArrayList<Quote> list = new ArrayList<Quote>();
         for (Quote q : quotes) {
             if (q.getAuthor() == a) {
                 list.add(q);

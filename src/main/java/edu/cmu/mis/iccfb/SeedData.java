@@ -48,10 +48,14 @@ public class SeedData {
                 "I think that only daring speculation can lead us further and not accumulation of facts.", 
                 "https://en.wikiquote.org/wiki/Albert_Einstein", 
                 a3);
+
+        
+       
         
         quoteService.save(q1);
         quoteService.save(q2);
         quoteService.save(q3);
+
         
         log.info("Quoates found with findAll():");
         log.info("-------------------------------");

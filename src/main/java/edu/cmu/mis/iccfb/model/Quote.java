@@ -18,7 +18,6 @@ public class Quote {
     
     
     @ManyToOne(optional = false)
-    @NaturalId
     private Author author;
     
 
